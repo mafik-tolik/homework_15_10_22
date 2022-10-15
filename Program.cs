@@ -1,7 +1,7 @@
 ﻿Console.Clear();
 
 
-// Ex64();
+Ex64();
 // Задача 64: Задайте значения M и N. Напишите рекурсивный метод, который выведет все натуральные числа кратные 3-ём в промежутке от M до N.
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
@@ -27,7 +27,7 @@ void Ex64()
 
 
 
-// Ex66();
+Ex66();
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
@@ -55,5 +55,26 @@ void Ex66()
 
 
 
+Ex68();
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
 
+void Ex68()
+{
+    Console.WriteLine("Введите неотрицательное число M:");
+    int numberM = Convert.ToInt32(Console.ReadLine());
 
+    Console.WriteLine("Введите неотрицательное число N:");
+    int numberN = Convert.ToInt32(Console.ReadLine());
+
+    int AckermanFunctions(int m, int n)
+    {
+        if (m == 0) return n + 1;
+        else if (n == 0) return AckermanFunctions(m - 1, 1);
+        else return AckermanFunctions(m - 1, AckermanFunctions(m, n - 1));
+    }
+    int result = AckermanFunctions(numberM, numberN);
+
+    Console.WriteLine("Результат вычисления функции Аккермана: " + result);
+}
