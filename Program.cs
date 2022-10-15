@@ -8,6 +8,7 @@ Ex64();
 
 void Ex64()
 {
+    Console.WriteLine("Задача 64:\n");
     Console.WriteLine("Введите натуральное число M:");
     int numberM = Convert.ToInt32(Console.ReadLine());
 
@@ -34,6 +35,7 @@ Ex66();
 
 void Ex66()
 {
+    Console.WriteLine("\n\nЗадача 66:\n");
     Console.WriteLine("Введите натуральное число M:");
     int numberM = Convert.ToInt32(Console.ReadLine());
 
@@ -62,6 +64,7 @@ Ex68();
 
 void Ex68()
 {
+    Console.WriteLine("\nЗадача 68:\n");
     Console.WriteLine("Введите неотрицательное число M:");
     int numberM = Convert.ToInt32(Console.ReadLine());
 
